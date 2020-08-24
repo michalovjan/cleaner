@@ -107,7 +107,8 @@ public class TemporaryBuildsCleanerAdapterImpl implements TemporaryBuildsCleaner
                 throw new OrchInteractionException(
                         String.format(
                                 "Deletion of a build %s failed! " + "Orchestrator"
-                                        + " reported a failure: [status={}, message={}].",
+                                        + " reported a failure: [status=%s, message=%s].",
+                                id,
                                 result == null ? null : result.getStatus(),
                                 result == null ? null : result.getMessage()));
             }
